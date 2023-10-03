@@ -4,13 +4,13 @@ const Buscador = ({ onSearch }) => {
     const [searchTerm, setSearchTerm] = useState("");
 
     const handleSearch = (e) => {
-        e.preventDefault();  // Prevent the default form submission
+        e.preventDefault();
         onSearch(searchTerm);
     }
 
     return (
         <div className="form-modern">
-            <h4 style={{margin:0}}>Buscador</h4>
+            <h4 >Buscador</h4>
             <form onSubmit={handleSearch}>
                 <input 
                     className="form-control"

@@ -1,13 +1,11 @@
-// import { BaseColaboradores } from "./BaseColaboradores";
 import PropTypes from 'prop-types'
 
 const Listado = ({colaboradores}) => {
     
- 
   return (
     <>
-        <div style={{display: 'flex', flexDirection: 'column'}}>
-            <table id='mini' className="table table-striped  table-hover  ">
+        <div style={{maxHeight : 'calc(50vh - 140px)', overflowY:'auto'}}>
+            <table className="table table-modern  table-hover">
                 <thead>
                     <tr>
                         <th scope="col">#</th>
@@ -29,8 +27,7 @@ const Listado = ({colaboradores}) => {
                         <td scope="row">{colaborador.telefono}</td>
                      </tr>
                      )}
-                </tbody>
-                    
+                </tbody>                   
             </table>
         </div>
     </>
@@ -38,7 +35,7 @@ const Listado = ({colaboradores}) => {
 };
 
 Listado.propTypes = {
-    colaboradores: PropTypes.string
+    colaboradores: PropTypes.array
 };
 
 export default Listado

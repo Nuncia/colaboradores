@@ -10,21 +10,32 @@ function App() {
   const [filteredColaboradores, setFilteredColaboradores] = useState([]);
 
   const filterColaboradores = (searchTerm) => {
-    console.log(searchTerm);
     
-    const filtered = colaboradores.filter(col => 
-      (col.nombre.toLowerCase()).includes(searchTerm.toLowerCase()) ||
-      (col.cargo.toLowerCase()).includes(searchTerm.toLowerCase()) ||
-      col.correo.toLowerCase().includes(searchTerm.toLowerCase()) ||
-      col.edad.toLowerCase().includes(searchTerm.toLowerCase()) ||
-      col.telefono.toLowerCase().includes(searchTerm.toLowerCase())
+    const filtered = colaboradores.filter(colaborador => 
+      colaborador.nombre.toLowerCase().includes(searchTerm.toLowerCase()) ||
+      colaborador.cargo.toLowerCase().includes(searchTerm.toLowerCase()) ||
+      colaborador.correo.toLowerCase().includes(searchTerm.toLowerCase()) ||
+      colaborador.edad.toLowerCase().includes(searchTerm.toLowerCase()) ||
+      colaborador.telefono.toLowerCase().includes(searchTerm.toLowerCase())
     );
-    setFilteredColaboradores(filtered);
+    if(filtered.length > 0){
+      setFilteredColaboradores(filtered);
+    } else{
+        const emptyCol = {
+          nombre: '',
+          correo: '',
+          edad: '',
+          telefono: ''
+        }
+        filtered.push(emptyCol);
+        setFilteredColaboradores(filtered);
+    }
+    
   }
 
   return (
     <div>   
-      <div style={{ display: 'block' }}>
+      <div className='container'>
         <Buscador onSearch={filterColaboradores} />
         <Listado colaboradores={filteredColaboradores.length > 0 ? filteredColaboradores : colaboradores} />
       </div>
