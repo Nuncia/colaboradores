@@ -23,7 +23,7 @@ function App() {
     } else{
         const emptyCol = {
           nombre: '',
-          correo: '',
+          correo: 'No hay datos',
           edad: '',
           telefono: ''
         }
