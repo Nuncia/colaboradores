@@ -15,7 +15,7 @@ const Buscador = ({ onSearch }) => {
                 <input 
                     className="form-control"
                     type="text" 
-                    name="name" 
+                    name="searchTerm" 
                     value={searchTerm}
                     onChange={e => setSearchTerm(e.target.value)}
                     placeholder="Buscar colaborador..."

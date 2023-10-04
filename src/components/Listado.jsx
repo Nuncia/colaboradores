@@ -1,7 +1,9 @@
 import PropTypes from 'prop-types'
+import { useState } from 'react';
 
-const Listado = ({colaboradores}) => {
-    
+
+const Listado = ({colaboradores, onDelete}) => {
+  
   return (
     <>
         <div style={{maxHeight : 'calc(50vh - 140px)', overflowY:'auto'}}>
@@ -20,11 +22,12 @@ const Listado = ({colaboradores}) => {
                 {colaboradores.map((colaborador) => 
                     <tr key={colaborador.id}>
                         <th scope="row">{colaborador.id}</th>
-                        <td scope="row">{colaborador.nombre}</td>
-                        <td scope="row">{colaborador.correo}</td>
-                        <td scope="row">{colaborador.edad}</td>
-                        <td scope="row">{colaborador.cargo}</td>
-                        <td scope="row">{colaborador.telefono}</td>
+                        <td>{colaborador.nombre}</td>
+                        <td>{colaborador.correo}</td>
+                        <td>{colaborador.edad}</td>
+                        <td>{colaborador.cargo}</td>
+                        <td>{colaborador.telefono}</td>
+                        
                      </tr>
                      )}
                 </tbody>                   

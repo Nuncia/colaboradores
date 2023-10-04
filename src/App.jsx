@@ -23,7 +23,7 @@ function App() {
     } else{
         const emptyCol = {
           nombre: '',
-          correo: 'No hay datos',
+          correo: 'No existen datos para su busqueda.',
           edad: '',
           telefono: ''
         }
@@ -31,7 +31,7 @@ function App() {
         setFilteredColaboradores(filtered);
     }
     
-  }
+  };
 
   return (
     <div>   
