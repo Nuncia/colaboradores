@@ -1,11 +1,37 @@
 #root {
-  max-width: 1280px;
+
   margin: 0 auto;
-  padding: 2rem;
+  padding: 0;
   text-align: center;
 }
 .container{
   display: block;
   flex-direction: column;
   display: block;
+}
+.container-fluid {
+  max-width: 100vw;  /* Asegura que el contenedor tenga el ancho de la ventana del navegador */
+}
+.container-fluid, .row {
+  height: 100vh;  /* Esto hará que ocupe toda la altura de la pantalla */
+}
+
+body, html {
+  height: 100%;
+  width: 100%;
+  margin: 0;
+  padding: 0;
+}
+.container-fluid {
+  max-width: 100vw;  /* Asegura que el contenedor tenga el ancho de la ventana del navegador */
+}
+.container-fluid, .row {
+  height: 100vh;  /* Esto hará que ocupe toda la altura de la pantalla */
+}
+
+body, html {
+  height: 100%;
+  width: 100%;
+  margin: 0;
+  padding: 0;
 }
