@@ -8,4 +8,5 @@ function Alert({ type, message }) {
   );
 }
 
+
 export default Alert;
