@@ -38,19 +38,16 @@ function Formulario({ addColaborador, setMessage, setAlertType }) {
   };
 
   return (
-    <div className="col-lg-6"> {}
+    <div className="formulario">
             <form onSubmit={handleSubmit}>
-                <input className="form-control mb-3" name="nombre" placeholder="Nombre" onChange={handleChange} value={colaborador.nombre} />
-                <input className="form-control mb-3" name="correo" placeholder="Correo" onChange={handleChange} value={colaborador.correo} />
-                <input className="form-control mb-3" name="edad" placeholder="Edad" onChange={handleChange} value={colaborador.edad} />
-                <input className="form-control mb-3" name="cargo" placeholder="Cargo" onChange={handleChange} value={colaborador.cargo} />
-                <input className="form-control mb-3" name="telefono" placeholder="Teléfono" onChange={handleChange} value={colaborador.telefono} />
-                <button type="submit" className="btn btn-primary">Agregar colaborador</button>
+                <input className="form-control mb-2" name="nombre" placeholder="Nombre" onChange={handleChange} value={colaborador.nombre} />
+                <input className="form-control mb-2" name="correo" placeholder="Correo" onChange={handleChange} value={colaborador.correo} />
+                <input className="form-control mb-2" name="edad" placeholder="Edad" onChange={handleChange} value={colaborador.edad} />
+                <input className="form-control mb-2" name="cargo" placeholder="Cargo" onChange={handleChange} value={colaborador.cargo} />
+                <input className="form-control mb-2" name="telefono" placeholder="Teléfono" onChange={handleChange} value={colaborador.telefono} />
+                <button type="submit" className="btn btn-primary boton">Agregar colaborador</button>
             </form>
-        </div>
-   
-
-
+    </div>
   );
 }
 

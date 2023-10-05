@@ -1,13 +1,19 @@
 #root {
-
   margin: 0 auto;
   padding: 0;
   text-align: center;
 }
 .container{
-  display: block;
-  flex-direction: column;
-  display: block;
+  display: grid;
+  grid-template-areas: 'container_buscador_Tabla form-container';
+  gap: 10px;
+}
+.container_buscador_Tabla{
+  grid-area: 'container_buscadorTabla';
+}
+.form-container{
+  grid-area: 'form-container';
+  margin-top: 132px;
 }
 .container-fluid {
   max-width: 100vw;  /* Asegura que el contenedor tenga el ancho de la ventana del navegador */
@@ -15,7 +21,6 @@
 .container-fluid, .row {
   height: 100vh;  /* Esto hará que ocupe toda la altura de la pantalla */
 }
-
 body, html {
   height: 100%;
   width: 100%;
@@ -27,11 +32,17 @@ body, html {
 }
 .container-fluid, .row {
   height: 100vh;  /* Esto hará que ocupe toda la altura de la pantalla */
+  display: flex;
 }
 
-body, html {
-  height: 100%;
-  width: 100%;
-  margin: 0;
-  padding: 0;
+@media (max-width: 768px){
+
+  .container{
+    display: flex;
+    flex-direction: column-reverse;
+    margin-top: 293px;
+  }
+  .container_buscador_Tabla{
+    margin-top: -14px;
+  }
 }

@@ -9,18 +9,17 @@ const Buscador = ({ onSearch }) => {
     }
 
     return (
-        <div className="form-modern">
-            <h4 >Buscador</h4>
-            <form onSubmit={handleSearch}>
+        <div className="form-modern mt-6">
+            <form onSubmit={handleSearch} className='formaBuscador'>
                 <input 
                     className="form-control"
                     type="text" 
-                    name="searchTerm" 
+                    name="name" 
                     value={searchTerm}
                     onChange={e => setSearchTerm(e.target.value)}
                     placeholder="Buscar colaborador..."
                 />
-                <button type="submit">Buscar</button>
+                <button type="submit" className='btn btn-primary' style={{}}>Buscar</button>
             </form>
         </div>
     );

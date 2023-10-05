@@ -30,6 +30,34 @@ body {
 
 .form-modern{
   margin-bottom: 30px;
+  margin-top: 30px;
+  /* border-collapse: collapse; */
+}
+.boton{
+  width: 283px;
+}
+.listado{
+  max-height: calc(70vh - 140px);
+  overflow: auto;
+}
+.formaBuscador{
+  display: flex;
+}
+.formulario{
+  width: 284px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.tablaColaboradores tr{
+  font-size: 12px;
+}
+.tablaColaboradores{
+  padding: 4px;
+}
+.contenedor_lista{
+  max-height: calc(50vh - 140px);
+  overflow-y: auto;
 }
 
 @media (prefers-color-scheme: light) {
@@ -45,5 +73,12 @@ body {
     color: #ffffff;
     border-radius: 2px;
     border-color: #315c86;
+  }
+
+  @media (max-width: 768px) {
+    .tablaColaboradores{
+      max-width: calc(100vh-140);
+    }
+    
   }
 }
