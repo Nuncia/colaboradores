@@ -25,7 +25,7 @@ function App() {
     } else{
         const emptyCol = {
           nombre: '',
-          correo: 'No existen datos para su busqueda.',
+          correo: 'No hay colaboradores para esta busqueda.',
           edad: '',
           telefono: ''
         }
@@ -33,7 +33,7 @@ function App() {
         setFilteredColaboradores(filtered);
     }
     
-  };
+  }
 
   const addColaborador = (newColaborador) => {
     if (newColaborador) {
@@ -49,7 +49,7 @@ function App() {
   return (
 <div className="container mt-5">
     <div className="row">  {}
-        <div className="col-md-6">  {}
+        <div className="col-md-6 list_container">  {}
             <div className="list-container">
                 <h2>Lista de colaboradores</h2>
                 <Buscador onSearch={filterColaboradores} />
@@ -58,7 +58,7 @@ function App() {
         </div>
         <div className="col-md-6">  {}
             <div className="form-container ml-5">
-                <div className=""> <h2>Agregar colaborador</h2> </div>
+                <div style={{textAlign: 'left'}}> <h3>Agregar colaborador</h3> </div>
                 <Formulario addColaborador={addColaborador} setMessage={setAlertMessage} setAlertType={setAlertType} />
                 <Alert message={alertMessage} type={alertType} />
             </div>
